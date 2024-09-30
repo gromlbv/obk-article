@@ -4,9 +4,82 @@
     font-style: normal;
 }
 body{
-    margin: 0;
-    padding: 0;
+
     background-color: #EEF3F7;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    margin: 120px 8vw;
+}
+.wrapper{
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2vw;
+    flex: 1 0 0;
+}
+
+.left-info, .right-banners, .top-banners{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    flex: 1 0 0;
+    align-self: stretch;
+
+    max-width: 360px;
+}
+.left-info>.block, .right-banners>.block, .top-banners>.block{
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    align-self: stretch;
+    height: fit-content;
+
+    font-size: 14px;
+    border-radius: 26px;
+    background: #FFF;
+}
+.right-banners>.block, .top-banners>.block{
+    width: 100%;
+    
+    border-radius: 26px;
+    padding: 12px;
+    max-height: 250px;
+    height: 100%;
+}
+.right-banners>.block>img, .top-banners>.block>img{
+    height: 100%;
+    object-fit: cover;
+}
+.logo-link{
+    width: 100%;
+    max-height: 72px;
+}
+.logo-link>img{
+    min-width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    object-fit: cover;
+}
+.top-banners{
+    display: none;
+    flex-direction: row;
+    max-height: 200px;
+}
+.block img{
+    border-radius: 14px;
+    width: 100%;    
+}
+.block h1{
+    font-size: 24px;
 }
 h1{
     margin: 0;
@@ -29,12 +102,11 @@ button{
 }
 
 
-.wrapper{
+.card-container{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 24px;
-    margin: 120px 25px;
 }
 .card{
     display: flex;
@@ -208,10 +280,9 @@ button{
 .phone{
     display: none;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 910px) {
     .card {
       flex-direction: column;
-      max-width: 255px;
       width: 100%;
     }
     .top-wr{
@@ -249,9 +320,31 @@ button{
         display: none;
     }
 }
+@media screen and (max-width: 1340px) {
+    .right-banners{
+        display: none;
+    }
+    .top-banners{
+        display: flex;
+    }
+    .left-info{
+        max-width: initial;
+    }
+}
+@media screen and (max-width: 610px) {
+    .wrapper{
+        flex-direction: column;
+    }
+    .card-container{
+        width: 100%;
+        align-items: center;
+        margin-top: 12px;
+    }
+}
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 920px) {
     .more-details{
         display: flex !important;
     }
 }
+

@@ -22,7 +22,7 @@ const cardsData = [
         "rating": 3.6,
         "bonus": "8 000 ₽",
         "code": "AN_CODE",
-        "logoURL": "source/logos/betsiti.png",
+        "logoURL": "https://betonmobile.ru/wp-content/uploads/2020/09/Betcity-3.png",
         "pros": [
             "Удобный интерфейс",
             "Быстрая регистрация"
@@ -67,7 +67,7 @@ function generateStars(rating) {
 
 
 window.onload = function() {
-    const cardsContainer = document.querySelector('.cards-container');
+    const cardsContainer = document.querySelector('.card-container');
 
     cardsData.forEach((card, index) => {
         const prosHTML = card.pros.map(pro => 
