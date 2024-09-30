@@ -57,6 +57,7 @@ button{
     justify-content: space-between;
     gap: 24px;
     width: 210px;
+    align-self: stretch;
     
 }
 .left-wr > img{
@@ -215,6 +216,7 @@ button{
     }
     .top-wr{
         width: 100%;
+        display: flex !important;
     }
     .divider{
         display: none;
@@ -248,7 +250,6 @@ button{
     }
 }
 
-/* На экранах шире 640px всегда показываем блоки details и mobile-links */
 @media screen and (min-width: 640px) {
     .more-details{
         display: flex !important;

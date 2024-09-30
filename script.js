@@ -89,7 +89,7 @@ window.onload = function() {
                 <div class="left-wr">
                     <div class="top-wr">
                         <a href="${card.siteURL}" target="_blank" class="logo-link">
-                            <img src="${card.logoURL}" alt="${card.name} Logo" onerror="this.parentElement.style.display='none';">
+                            <img src="${card.logoURL}" alt="${card.name} Logo" onerror="this.closest('.top-wr').style.display='none'; this.parentElement.style.display='none';">
                         </a>
                         <div class="down-wr phone logo" id="mobile-links-${index}">
                             <a href="${card.appleStoreURL}" class="link-btn" target="_blank">
