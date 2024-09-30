@@ -180,3 +180,21 @@ window.onload = function() {
         });
     });
 };
+function copyToClipboard(button) {
+    const code = button.getAttribute("data-code");
+    const tempInput = document.createElement("input");
+    tempInput.value = code;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    tempInput.setSelectionRange(0, 99999); // Для мобильных устройств
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+
+    // Показываем уведомление о том, что код скопирован
+    button.innerHTML = `Скопировано! <img src="source/copy-check.svg" alt="Copied Icon">`;
+
+    // Через некоторое время возвращаем исходный текст
+    setTimeout(() => {
+        button.innerHTML = `${code} <img src="source/copy.svg" alt="Copy Icon">`;
+    }, 2000);
+}
