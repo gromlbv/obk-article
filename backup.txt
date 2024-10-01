@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBK</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="card">
+            <div class="left-wr">
+                <img src="source/logos/fonbet.png" alt="FONBETLOGO">
+                <div class="name-wr">
+                    <h1>Fonbet</h1>
+                    <div class="stars" data-rating="4.5">
+                    </div>
+                    <div class="bonus">
+                        <img src="source/gift.svg">
+                        10 000 ₽
+                    </div>
+                </div>
+                <button class="more-btn">
+                    Подробнее
+                    <img src="source/more.svg">
+                </button>
+                <div class="btn-wr">
+                    <button class="link-btn">
+                        Перейти на сайт
+                        <img src="source/link.svg">
+                    </button>
+                    <div class="down-wr">
+                        <button class="link-btn"><img src="source/apple.svg"></button>
+                        <button class="link-btn"><img src="source/android.svg"></button>
+                    </div>
+                </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="2" height="311" viewBox="0 0 2 311" fill="none">
+                <path d="M1 1V309.48" stroke="#DEE6EC" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            <div class="right-wr">
+                <div class="more-wr">
+                    <h3>Бонус 10 000 ₽</h3>
+                    <p>Фрибет за регистрацию по промокоду</p>
+                    <button class="copy" data-code="BK_CODE" onclick="copyToClipboard(this)"><img src="source/copy.svg" alt=""></button>
+                 </div>
+                <div class="reviews-wr">
+                    <h3>Плюсы и минусы Fonbet</h3>
+                    <div class="review pos">
+                        <img src="source/thumb-up.svg">
+                        Простая регистрация в ЦУПИС
+                    </div>
+                    <div class="review neg">
+                        <img src="source/thumb-down.svg">
+                        Мало трансляций и Live-инфографики
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

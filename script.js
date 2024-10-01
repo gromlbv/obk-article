@@ -118,7 +118,7 @@ window.onload = function() {
                         <img src="source/more.svg" alt="More Icon">
                     </button>
                     <div class="btn-wr">
-                        <a href="${card.siteURL}" class="link-btn" target="_blank">
+                        <a href="${card.siteURL}" class="link-btn www" target="_blank">
                             Перейти на сайт
                             <img src="source/link.svg" alt="Link Icon">
                         </a>
@@ -132,9 +132,6 @@ window.onload = function() {
                         </div>
                     </div>
                 </div>
-                <svg class="divider" xmlns="http://www.w3.org/2000/svg" width="2" height="311" viewBox="0 0 2 311" fill="none">
-                    <path d="M1 1V309.48" stroke="#DEE6EC" stroke-width="2" stroke-linecap="round"/>
-                </svg>
                 <div class="right-wr more-details" id="details-${index}">
                     <div class="more-wr">
                         <h3>Бонус ${card.bonus}</h3>
@@ -149,7 +146,7 @@ window.onload = function() {
                         ${consHTML}
                     </div>
                 </div>
-                <a href="${card.siteURL}" class="link-btn phone" target="_blank">
+                <a href="${card.siteURL}" class="link-btn www phone" target="_blank">
                     Перейти на сайт
                     <img src="source/link.svg" alt="Link Icon">
                  </a>
@@ -157,6 +154,15 @@ window.onload = function() {
         `;
 
         cardsContainer.innerHTML += cardHTML;
+
+        // Добавляем разделительную линию, если это не последняя карточка
+        if (index < cardsData.length - 1) {
+            cardsContainer.innerHTML += `
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="8px" fill="none">
+                    <path d="M0 4.47961H900" stroke="#1B252B" stroke-opacity="0.25" stroke-width="7"/>
+                </svg>
+            `;
+        }
     });
 
     // Добавляем функциональность для кнопки "Подробнее" только для экранов < 640px
@@ -165,20 +171,21 @@ window.onload = function() {
         button.addEventListener('click', function() {
             const index = button.getAttribute('data-index');
             const details = document.getElementById(`details-${index}`);
-            const mobileLinks = document.getElementById(`mobile-links-${index}`);
-            
-            // Проверяем ширину экрана
-            if (window.innerWidth < 640) {
-                if (details.style.display === 'none' || !details.style.display) {
-                    details.style.display = 'flex';
-                    button.innerHTML = 'Скрыть подробности <img src="source/more.svg" alt="More Icon">';
-                } else {
-                    details.style.display = 'none';
-                    button.innerHTML = 'Подробнее <img src="source/more.svg" alt="More Icon">';
-                }
+            const icon = button.querySelector('img');
+        
+            if (details.style.display === 'none' || !details.style.display) {
+                details.style.display = 'flex';
+                button.innerHTML = 'Скрыть подробности <img src="source/more-rotated.svg" alt="More Icon">';
+            } else {
+                details.style.display = 'none';
+                button.innerHTML = 'Подробнее <img src="source/more.svg" alt="More Icon">';
             }
         });
     });
+
+    
+    
+    
 };
 function copyToClipboard(button) {
     const code = button.getAttribute("data-code");
