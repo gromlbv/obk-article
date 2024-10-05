@@ -190,7 +190,9 @@ a:hover{
     width: calc(100% - 256px); /* Учитываем ширину фиксированного блока */
     margin-left: 256px; /* Отступ слева для учета фиксированного блока */
 }
-
+.main > img{
+    border-radius: 28px;
+}
 .block{
     transition: 0.2s;
     display: flex;
