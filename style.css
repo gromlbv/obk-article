@@ -1,15 +1,23 @@
-html{
-    display: flex;
-    justify-content: center;
-}
 *{
-    font-family: "Inter", system-ui;
+    font-family: "Wix Madefor Display", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    box-sizing: border-box; /* Применяем ко всем элементам */
+    box-sizing: border-box;
+}
+h1{
+    margin: 0;
+    overflow-wrap: break-word;
+    color: #141414;
+    font-size: 32px;
+    font-weight: 700;
+}
+p{
+    margin: 0;
+    color: #262626;
+    font-size: 16px;
+    font-weight: 400;
 }
 header{
-    background: rgba(43, 60, 70, 0.50);
     width: 100%;
     max-width: 1360px;
     display: flex;
@@ -19,389 +27,238 @@ header{
 
     border-radius: 24px;
 }
-header h1{
-    width: fit-content;
-}
-b{
-    margin-bottom: -12px;
-}
 body{
-    background: radial-gradient(91.23% 103.55% at 18.78% 21.04%, #F00 0%, #059 100%);
-    align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    margin: 24px 8vw;
-    max-width: 1020px;
+    align-items: center;
+    width: 100%;
+    margin: 0;
 }
 .wrapper{
-    width: 100%;
-    max-width: 1400px;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 2vw;
-    flex: 1 0 0;
-}
-
-.left-info, .right-banners, .top-banners{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 24px;
-    flex: 1 0 0;
-    align-self: stretch;
-    max-width: 360px;
+    width: 1024px;
+    padding: 0 0 24px 0;
 }
-.left-info{
-    width: 100%;
-    max-width: initial;
-}
-.top-banners{
-    max-width: initial;
-    height: fit-content;
-}
-.left-info>.block, .right-banners>.block, .top-banners>.block{
+
+
+
+.contents{
+    width: 256px;
     display: flex;
-    padding: 24px;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
+    position: fixed;
+}
 
-    align-self: stretch;
-
-
+a.active {
+    opacity: 100%;
+}  
+a{
+    color: #000;
+    opacity: 60%;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 4px 0;
+}
+a:hover{
+    color: #404040;
+}
+.application > .btn-wrapper{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+.application > .btn-wrapper > *{
+    display: flex;
+    height: 42px;
+    padding: 12px 14px;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+    width: 100%;
     font-size: 14px;
-    border-radius: 40px;
-    background: rgba(43, 60, 70, 0.50);
-    color: rgba(255, 255, 255, 0.65);
-}
-.left-info>.block{
-    border-radius: 26px;
-}
-.right-banners>.block, .top-banners>.block{
-    width: 100%;
-    border-radius: 34px;
-    padding: 18px;
-    max-height: 250px;
-}
-.right-banners>.block>img, .top-banners>.block>img{
-    height: 100%;
-    object-fit: cover;
-    border-radius: 14px;
-}
-.logo-link{
-    width: 100%;
-    max-height: 72px;
-}
-.logo-link>img{
-    width: 100%;
-    height: 100%;
-    border-radius: 14px;
-    object-fit: cover;
-}
-.top-banners{
-    display: none;
-    flex-direction: row;
-    max-height: 200px;
-}
-.block img{
-    border-radius: 14px;
-    width: 100%;    
-}
-.block h1{
-    font-size: 24px;
-}
-h1{
-    margin: 0;
-    width: 100%;
-    overflow-wrap: break-word;
-    overflow: hidden; /* Скрыть переполнение */
-    text-overflow: ellipsis; /* Добавить многоточие в конце */
+
+    border-radius: 12px;
+    border: 1px solid #404040;
+    background: #232323;
     color: white;
 }
-h3{
-    margin: 0;
-    color: #FFF;
-    font-size: 18px;
+.application > .btn-wrapper > button{
+    border: none;
+    background: white;
+    color: black;
+    
     font-weight: 600;
+    justify-content: center;
+    cursor: pointer;
 }
-p{
-    margin: 0;
-    color: rgba(255, 255, 255, 0.65);
+.application > .btn-wrapper > button:hover{
+    opacity: 0.8;
+}
+
+
+
+.block.recommend{
+    display: flex;
+    flex-direction: column;
+    background: #181716;
+}
+.block.recommend > h1{
+    color: white;
+}
+.recommend-wr{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 14px;
+}
+
+.recommend-wr > div{
+    display: flex;
+    padding: 12px;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+    border-radius: 18px;
+    border: 1px solid #404040;
+    background: #232323;
+    color: white;
+    width: 100%; 
+}
+.recommend-wr > div > img{
+    height: 36px;
+}
+.recommend-wr > div > .maintext{
+    width: 100%;
+
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.stars{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+
+    height: 10px;
+    color: #FFF;
+    font-size: 13.5px;
+
+    font-weight: 500;    
+}
+.stars > img:last-child{
+    margin-right: 3px;
+}
+.recommend-wr > div > button{
+    display: flex;
+    
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;  
+
+    min-width: fit-content;
+    height: 36px;
+    padding: 12px 14px;
+
+    border-radius: 8px;
+    border: 1px solid #404040;
+    background-color: transparent;
+    color: white;
+    font-weight: 600;
     font-size: 14px;
-    font-weight: 400;
-}
-button{
+
+    
     cursor: pointer;
 }
 
+.recommend-wr > div > button:hover{
+    background: #404040;
+}
 
-.card-container{
+
+.main{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    border-radius: 40px;
-    background: rgba(43, 60, 70, 0.50);
-    gap: 0px;
-    flex: 1;
-}
-.card{
-    display: flex;
-    max-width: 100%;
-    min-width: 560px;
-    width: 100%;
-    border-radius: 26px;
-    flex: 1;
-    padding: 26px;
-    align-items: flex-start;
     gap: 18px;
-    color: white;
-}
-
-
-/* ЛЕВЫЙ БЛОК */
-
-.left-wr{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 24px;
-    width: 210px;
-    align-self: stretch;
-}
-.left-wr > img{
-    height: 72px;
-    border-radius: 12px;
-    object-fit: cover;
-}
-.btn-wr{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-.down-wr{
-    display: flex;
-    gap: 8px;
-    flex-direction: row;
-}
-/* МОБИЛА */
-.top-wr{
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-}
-.down-wr.logo{
-    flex-direction: column;
-}
-.btn-wr > .link-btn{
-    flex: initial;
-}
-.link-btn{
-    display: flex;
-    height: 38px;
-    padding: 4px 15px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex: 1 0 0;
-
-    border-radius: 14px;
-    background: rgba(27, 37, 43, 0.25);
-    border: none;
-    color: white;
-    text-decoration: none;
     
+    width: calc(100% - 256px); /* Учитываем ширину фиксированного блока */
+    margin-left: 256px; /* Отступ слева для учета фиксированного блока */
 }
-.link-btn.www{
-    border-radius: 14px;
-    background: #FFF;
 
-    color: #000;
-    font-size: 14px;
-    font-weight: 500;
-}
-.name-wr{
+.block{
+    transition: 0.2s;
     display: flex;
+    padding: 19px 26px 24px 26px;
     flex-direction: column;
-    width: 100%;
-    gap: 6px;
-
-    padding: 0px 8px;
-}
-.bonus{
-    width: fit-content;
-    margin-top: 10px;
-    padding: 5px 0px;
-}
-.bonus > a{
-    display: flex;
-    
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-
-    color: #24E37C;
-    font-size: 18px;
-    font-weight: 500;
-    text-decoration: none;
-}
-/* ПРАВЫЙ БЛОК */
-.right-wr{
-    display: flex;
-    padding: 12px;
-    flex-direction: column;
-    justify-content: space-between;
     align-items: flex-start;
-    flex: 1 0 0;
+    gap: 12px;
     align-self: stretch;
 
-    border-radius: 14px;
-    background: rgba(27, 37, 43, 0.25);
+    border-radius: 28px;
+    border: 1px solid #E2E2E2;
+    background: #FFF;
 }
-.more-wr{
+
+
+
+.block.quote{
     display: flex;
+    padding: 12px 18px;
     flex-direction: column;
-    gap: 4px;
-}
-.copy{
-    display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 10px;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
 
-    height: 32px;
-    width: fit-content;
-    padding: 2px 8px;
-    margin-top: 8px;
-    
-    border: none;
-    border-radius: 8px;
-    background: #DE0505;
-    
-
-    color: white;
-    font-size: 14px;
+    border-radius: 12px;
+    background: #181716;
+    color: #EDEDED;
+    font-size: 18px;
     font-weight: 600;
 }
-.reviews-wr{
+.head{
     display: flex;
-    flex-direction: column;
-    gap: 6px;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+
+    color: #DDDCDC;
+    font-size: 14px;
+    font-weight: 500;
 }
-.review{
-    display: flex;
-    padding: 6px 4px;
-    align-items: center;
-    gap: 10px;
-    border-radius: 14px;
+
+
+.application{
+    border-radius: 28px;
+    border: 1px solid #E2E2E2;
+    background: #181716;
+}
+.application > h1{
     color: white;
+}
+.application > p{
+    color: #414141;
     font-size: 14px;
 }
 
-.more-btn{
-    display: none;
-    padding: 8px 12px 8px 10px;
-    justify-content: space-between;
-    align-items: center;
-    align-self: stretch;
-
-    border: none;
-    border-radius: 14px;
-    background: rgba(27, 37, 43, 0.25);
-    color: white;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-}
-.phone{
-    display: none;
+.active-block {
+    transition: 0.2s;
+    opacity: .5;
 }
 
-@media screen and (max-width: 940px) {
-    .card {
-      flex-direction: column;
-      flex: 1;
-      min-width: initial;
-    }
-    .card-container{
-        max-width: 100%;
-    }
-    .top-wr{
-        width: 100%;
-        display: flex !important;
-    }
-    .divider{
-        display: none;
-    }
-    .btn-wr{
-        display: none;
-    }
-    .left-wr{
+@media screen and (max-width: 1220px) {
+    .main{
         width: 100%;
     }
-    .right-banners{
-        max-width: 230px;
-    }
-    .right-wr{
-        gap: 24px;
-    }
-    .more-btn{
-        display: flex;
-        flex: 1;
-    }
-    .phone{
-        display: flex;
-        flex: 1;
-    }
-    .link-btn.www{
-        display: flex;
-        width: 100%;
-        height: 38px;
-        padding: 0;
-        flex: initial;
-        
-    }
-    .right-banners{
-        flex: 1;
-        max-width: 40%;
-    }   
-    .more-details{
-        display: none;
-        margin-top: -12px;
-    }
-}
-@media screen and (max-width: 340px) {
-    .right-banners{
-        display: none;
-    }
-    .top-banners{
-        display: flex;
-    }
-    .left-info{
-        max-width: initial;
-    }
-}
-@media screen and (max-width: 610px) {
     .wrapper{
-        flex-direction: column;
-        gap: 24px;
-    }
-    .card-container{
         width: 100%;
-        align-items: center;
-        margin-top: 12px;
-    }
-    .right-banners{
-        flex-direction: row;
-        max-height: initial;
-        max-width: initial;
-    }
-}
-
-@media screen and (min-width: 920px) {
-    .more-details{
-        display: flex !important;
+        padding: 24px;
     }
 }
 
