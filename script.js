@@ -85,7 +85,7 @@ navLinks.forEach((link) => {
 window.addEventListener('scroll', () => {
     if (!isScrolling) {
         clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(changeActiveLink, 001);
+        scrollTimeout = setTimeout(changeActiveLink);
     }
 });
 

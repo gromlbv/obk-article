@@ -8,7 +8,7 @@ h1{
     margin: 0;
     overflow-wrap: break-word;
     color: #141414;
-    font-size: 32px;
+    font-size: min(32px, 6vw);
     font-weight: 700;
 }
 p{
@@ -125,10 +125,16 @@ a:hover{
     color: white;
     width: 100%; 
 }
-.recommend-wr > div > img{
+.left-wr{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    width: 100%;
+}
+.left-wr > img{
     height: 36px;
 }
-.recommend-wr > div > .maintext{
+ .maintext{
     width: 100%;
 
     font-style: normal;
@@ -186,9 +192,7 @@ a:hover{
     display: flex;
     flex-direction: column;
     gap: 18px;
-    
-    width: calc(100% - 256px); /* Учитываем ширину фиксированного блока */
-    margin-left: 256px; /* Отступ слева для учета фиксированного блока */
+    padding-left: 256px;
 }
 .main > img{
     border-radius: 28px;
@@ -263,4 +267,48 @@ a:hover{
         padding: 24px;
     }
 }
+@media screen and (max-width: 750px) {
+    .contents{
+        position: initial;
+        padding: 24px;
+    }
+    .contents > a{
+        padding: 6px 0;
+    }
+    .main{
+        padding-left: initial;
+    }
+    .wrapper{
+        flex-direction: column;
+        width: 100%;
+        padding: 24px;
+    }
+    .btn-wrapper{
+        flex-direction: column;
+        
+    }
+    .btn-wrapper > div{
+        flex-wrap: wrap;
+    }
+    .recommend-wr > .send{
+        flex-direction: column;
+    }
+    .recommend-wr > .send > button{
+        width: 100%;
+        justify-content: center;
+    }
+}
 
+
+@media screen and (max-width: 490px) {
+    .recommend-wr > div{
+        flex-direction: column;
+    }
+    .recommend-wr > div > button{
+        width: 100%;
+        justify-content: center;
+    }
+    .left-wr{
+        flex-direction: row-reverse;
+    }
+}
